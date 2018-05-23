@@ -1,0 +1,31 @@
+.sidebar-toggle {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    padding: 20px 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #FFF;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.page-container {
+    width: 100%;
+    height: 96vh;
+    background-color: #f4f4f4;
+    padding: 4vh 0 0;
+}
+
+.page-canvas {
+    width: 50vw;
+    height: 90vh;
+    background-color: #FFF;
+    margin: 0 auto;
+}
