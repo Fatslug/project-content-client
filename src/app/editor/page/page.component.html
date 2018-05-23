@@ -1,0 +1,9 @@
+<div class="page-container">
+	<div class="sidebar-toggle" (click)="toggleSidebar()">
+		<i Class="material-icons" *ngIf="sidebarOpen">keyboard_arrow_right</i>
+		<i Class="material-icons" *ngIf="!sidebarOpen">keyboard_arrow_left</i>
+	</div>
+	<div class="page-canvas" ondragover="event.preventDefault()" ondragend="setContent($event)">
+		<p>Page content goes here...</p>
+	</div>
+</div>
