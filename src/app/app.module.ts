@@ -21,6 +21,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './editor/sidebar/sidebar.component';
 import { EditorComponent } from './editor/editor.component';
 import { PageComponent } from './editor/page/page.component';
+import { DraggableModule } from './draggable/draggable.module';
 
 @NgModule({
 	declarations: [
@@ -37,7 +38,8 @@ import { PageComponent } from './editor/page/page.component';
 			ROUTES
 			// { enableTracing: true } // <-- debugging purposes only
 		),
-		FlexLayoutModule
+		FlexLayoutModule,
+		DraggableModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

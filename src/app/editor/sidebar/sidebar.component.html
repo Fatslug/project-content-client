@@ -1,25 +1,73 @@
 <div class="sidebar-container">
 	<section>
+		<!-- Component -->
 		<h3 class="mat-title">Components</h3>
-		<div class="draggable component" draggable="true" (drag)="onComponentDrag()">
+		<div class="component" appDraggable
+			(dragStart)="onDragStart()"
+			(dragMove)="onDragMove($event)"
+			(dragEnd)="onDragEnd()">
+
 			<h4 class="mat-subheading-2">Hero Banner</h4>
 			<p class="mat-caption">Large background image with title/subtitle. Generally used at the top of a page.</p>
+
+			<div class="component placeholder" *appDraggablePlaceholder>
+				<h4 class="mat-subheading-2">Hero Banner</h4>
+				<p class="mat-caption">Large background image with title/subtitle. Generally used at the top of a page.</p>
+			</div>
 		</div>
-		<div class="draggable component" draggable="true" (drag)="onComponentDrag()" (drop)="onComponentDrop()">
+
+		<!-- Component -->
+		<div class="component" appDraggable
+			(dragStart)="onDragStart()"
+			(dragMove)="onDragMove($event)"
+			(dragEnd)="onDragEnd()">
+
 			<h4 class="mat-subheading-2">Content Section</h4>
 			<p class="mat-caption">Section of a page dedicated to a comibination of text and images. Generally used as a paragraph/image combo.</p>
+
+			<div class="component placeholder" *appDraggablePlaceholder>
+				<h4 class="mat-subheading-2">Content Section</h4>
+				<p class="mat-caption">Section of a page dedicated to a comibination of text and images. Generally used as a paragraph/image combo.</p>
+			</div>
 		</div>
-		<div class="draggable component" draggable="true" (drag)="onComponentDrag()" (drop)="onComponentDrop()">
+		<div class="draggable component" appDraggable
+			(dragStart)="onDragStart()"
+			(dragMove)="onDragMove($event)"
+			(dragEnd)="onDragEnd()">
+
 			<h4 class="mat-subheading-2">Gallery Section</h4>
 			<p class="mat-caption">Section of a page dedicated to a gallery of images in grid or other layout.</p>
+
+			<div class="component placeholder" *appDraggablePlaceholder>
+				<h4 class="mat-subheading-2">Gallery Section</h4>
+				<p class="mat-caption">Section of a page dedicated to a gallery of images in grid or other layout.</p>
+			</div>
 		</div>
-		<div class="draggable component" draggable="true" (drag)="onComponentDrag()" (drop)="onComponentDrop()">
+		<div class="draggable component" appDraggable
+			(dragStart)="onDragStart()"
+			(dragMove)="onDragMove($event)"
+			(dragEnd)="onDragEnd()">
+
 			<h4 class="mat-subheading-2">Carousel Section</h4>
 			<p class="mat-caption">Section of a page dedicated to a carousel of images.</p>
+
+			<div class="component placeholder" *appDraggablePlaceholder>
+				<h4 class="mat-subheading-2">Carousel Section</h4>
+				<p class="mat-caption">Section of a page dedicated to a carousel of images.</p>
+			</div>
 		</div>
-		<div class="draggable component" draggable="true" (drag)="onComponentDrag()" (drop)="onComponentDrop()">
+		<div class="draggable component" appDraggable
+			(dragStart)="onDragStart()"
+			(dragMove)="onDragMove($event)"
+			(dragEnd)="onDragEnd()">
+
 			<h4 class="mat-subheading-2">Contact Section</h4>
 			<p class="mat-caption">Contact section of a page to allow for an email form, or other contact details.</p>
+
+			<div class="component placeholder" *appDraggablePlaceholder>
+				<h4 class="mat-subheading-2">Contact Section</h4>
+				<p class="mat-caption">Contact section of a page to allow for an email form, or other contact details.</p>
+			</div>
 		</div>
 	</section>
 </div>

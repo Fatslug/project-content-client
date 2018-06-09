@@ -1,34 +1,30 @@
 import { MatSidenav } from '@angular/material/sidenav';
-import { Component, OnInit, Input, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 
 @Component({
 	selector: 'app-editor-sidebar',
 	templateUrl: './sidebar.component.html',
-	styleUrls: ['./sidebar.component.scss']
+	styleUrls: ['./sidebar.component.scss'],
+	encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent implements OnInit {
-
-	@Output()
-	onDrag = new EventEmitter();
-
-	private dragSubject = new BehaviorSubject<string>('');
-	public drag$ = this.dragSubject.asObservable();
 
 	constructor() { }
 
 	ngOnInit() {
 	}
 
-	public onComponentDrag(): void {
-		this.dragSubject.next('test');
-		this.onDrag.emit('test');
+	onDragStart(): void {
+		console.log('Got drag start...');
 	}
 
-	public onComponentDrop($event): void {
-		console.log('DROPPED!');
-		console.log($event);
-		this.dragSubject.next('');
+	onDragMove(event: PointerEvent): void {
+		console.log('Got drag move...', event.clientX, event.clientY);
+	}
+
+	onDragEnd(): void {
+		console.log('Got drag end...');
 	}
 
 }

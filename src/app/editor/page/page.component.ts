@@ -26,4 +26,9 @@ export class PageComponent implements OnInit {
 		console.log($event);
 	}
 
+	public drop($event) {
+		$event.preventDefault();
+		console.log($event);
+	}
+
 }

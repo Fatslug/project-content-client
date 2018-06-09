@@ -1,11 +1,11 @@
 <mat-sidenav-container>
 
 	<mat-sidenav #sidebar mode="side" [(opened)]="sidenavOpen">
-		<app-editor-sidebar (onDrag)="setDraggedComponent($event)"></app-editor-sidebar>
+		<app-editor-sidebar></app-editor-sidebar>
 	</mat-sidenav>
 
 	<mat-sidenav-content>
-		<app-editor-page (sidebar)="toggleSidebar()"></app-editor-page>
+		<app-editor-page></app-editor-page>
 	</mat-sidenav-content>
 
 </mat-sidenav-container>
